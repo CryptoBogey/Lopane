@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gianfranco Lopane — Sales Leader · AI Builder</title>
+<meta name="description" content="Senior Sales & GTM leader who also builds AI systems. 10+ years enterprise revenue. $40M+ P&L. 12 autonomous agents in production. Based between Miami and Málaga.">
+<meta property="og:title" content="Gianfranco Lopane — Sales Leader · AI Builder">
+<meta property="og:description" content="Two rare superpowers: enterprise sales track record + real AI systems in production.">
+<meta property="og:url" content="https://lopane.net">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+:root {
+  --bg:          #07090f;
+  --bg2:         #0b0f1a;
+  --bg3:         #0f1520;
+  --border:      #141c2c;
+  --border2:     #1a2540;
+  --green:       #00e87a;
+  --green-dim:   #00994d;
+  --green-dark:  #0a2818;
+  --green-glow:  rgba(0,232,122,0.10);
+  --blue:        #3b82f6;
+  --blue-soft:   #60a5fa;
+  --text:        #c8d8e8;
+  --text-dim:    #556070;
+  --text-dimmer: #28384a;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scanline texture */
+body::before {
+  content: '';
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px);
+  pointer-events: none; z-index: 0;
+}
+
+/* ── NAV ── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(7,9,15,0.96);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 48px;
+  display: flex; justify-content: space-between; align-items: center;
+  backdrop-filter: blur(12px);
+}
+.nav-logo { font-size: 14px; color: var(--green); letter-spacing: 3px; font-weight: 700; }
+.nav-logo span { color: var(--text-dim); }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a {
+  font-size: 11px; color: var(--text-dimmer); letter-spacing: 1.5px;
+  text-decoration: none; cursor: pointer; transition: color 0.2s; text-transform: uppercase;
+}
+.nav-links a:hover { color: var(--green); }
+.nav-cta {
+  padding: 8px 20px; border: 1px solid var(--green-dim);
+  background: transparent; color: var(--green); font-family: var(--mono);
+  font-size: 11px; cursor: pointer; letter-spacing: 1px; transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--green-glow); box-shadow: 0 0 20px rgba(0,232,122,0.12); }
+
+/* ── HERO ── */
+.hero {
+  max-width: 1100px; margin: 0 auto;
+  padding: 80px 48px 48px;
+  position: relative; z-index: 1;
+}
+.hero-prompt { font-size: 12px; color: var(--text-dimmer); margin-bottom: 16px; }
+.hero-prompt .p-path { color: var(--green-dim); }
+.hero-name {
+  font-size: clamp(52px, 8vw, 100px);
+  font-weight: 700; line-height: 0.92;
+  color: var(--green);
+  text-shadow: 0 0 80px rgba(0,232,122,0.15);
+  margin-bottom: 24px; letter-spacing: -3px;
+}
+.cursor {
+  display: inline-block; width: 3px; background: var(--green);
+  height: 0.82em; vertical-align: bottom;
+  animation: blink 1s step-end infinite; margin-left: 2px;
+}
+@keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+
+/* ── DUAL SUPERPOWER BANNER ── */
+.powers-wrap {
+  max-width: 1100px; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.powers-label {
+  padding: 0 48px 14px;
+  font-size: 10px; color: var(--text-dimmer); letter-spacing: 2px;
+}
+.powers-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--border);
+}
+.power-half {
+  background: var(--bg); padding: 36px 48px;
+  position: relative; overflow: hidden;
+  cursor: default; transition: background 0.3s;
+}
+.power-half:hover { background: var(--bg2); }
+.power-half::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  transition: opacity 0.3s;
+}
+.power-half.sales::before { background: linear-gradient(90deg,#3b82f6,#60a5fa); opacity: 0.5; }
+.power-half.ai::before   { background: linear-gradient(90deg,#00e87a,#00aaff); opacity: 0.5; }
+.power-half:hover::before { opacity: 1; }
+.power-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; font-weight: 700; }
+.power-half.sales .power-tag { color: var(--blue-soft); }
+.power-half.ai    .power-tag { color: var(--green); }
+.power-headline {
+  font-family: var(--sans); font-size: 24px; font-weight: 900;
+  color: var(--text); margin-bottom: 12px; line-height: 1.15; letter-spacing: -0.3px;
+}
+.power-desc { font-size: 12px; color: var(--text-dim); line-height: 1.85; max-width: 380px; }
+.power-stats { display: flex; gap: 28px; margin-top: 24px; }
+.power-stat-n { font-size: 22px; font-weight: 700; line-height: 1; }
+.power-half.sales .power-stat-n { color: var(--blue-soft); }
+.power-half.ai    .power-stat-n { color: var(--green); }
+.power-stat-l { font-size: 9px; color: var(--text-dimmer); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+
+/* ── BIO ── */
+.hero-bio {
+  max-width: 1100px; margin: 0 auto;
+  padding: 36px 48px 48px;
+  position: relative; z-index: 1;
+}
+.hero-bio-text {
+  font-size: 12px; color: var(--text-dim); line-height: 2.2;
+  max-width: 640px; border-left: 1px solid var(--border2);
+  padding-left: 24px; margin-bottom: 28px;
+}
+.hl      { color: var(--green); }
+.hl-blue { color: var(--blue-soft); }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  padding: 11px 28px; border: 1px solid var(--green-dim);
+  background: transparent; color: var(--green);
+  font-family: var(--mono); font-size: 11px; cursor: pointer;
+  letter-spacing: 1px; transition: all 0.2s; position: relative; overflow: hidden;
+}
+.btn-primary:hover { background: var(--green-glow); box-shadow: 0 0 20px rgba(0,232,122,0.12); }
+.btn-ghost {
+  padding: 11px 24px; border: 1px solid var(--border2);
+  color: var(--text-dim); font-family: var(--mono); font-size: 11px;
+  cursor: pointer; transition: all 0.2s; background: transparent;
+}
+.btn-ghost:hover { border-color: var(--text-dim); color: var(--text); }
+
+/* ── STATS STRIP ── */
+.stats-strip {
+  display: grid; grid-template-columns: repeat(5,1fr);
+  gap: 0; background: var(--border);
+  border-top: 1px solid var(--border);
+  position: relative; z-index: 1;
+}
+.stat-cell {
+  background: var(--bg); padding: 22px 28px;
+  text-align: center; transition: background 0.2s; cursor: default;
+}
+.stat-cell:hover { background: var(--bg2); }
+.stat-n { font-size: 32px; font-weight: 700; color: var(--green); line-height: 1; }
+.stat-n.blue { color: var(--blue-soft); }
+.stat-l { font-size: 9px; color: var(--text-dimmer); letter-spacing: 1px; text-transform: uppercase; margin-top: 6px; }
+
+/* ── F500 BAR ── */
+.f500-bar {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 48px; background: var(--bg2);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  flex-wrap: wrap; position: relative; z-index: 1;
+}
+.f500-label { font-size: 9px; color: var(--text-dimmer); letter-spacing: 2px; text-transform: uppercase; white-space: nowrap; }
+.f500-sep { width: 1px; height: 18px; background: var(--border2); }
+.f500-item {
+  font-size: 10px; color: var(--text-dimmer); letter-spacing: 1.5px;
+  text-transform: uppercase; font-weight: 700; padding: 3px 10px;
+  border: 1px solid var(--border); cursor: default; transition: all 0.2s;
+}
+.f500-item:hover { border-color: var(--border2); color: var(--text-dim); }
+
+/* ── SECTION ── */
+.section {
+  max-width: 1100px; margin: 0 auto;
+  padding: 56px 48px;
+  border-top: 1px solid var(--border);
+  position: relative; z-index: 1;
+}
+.section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; }
+.section-cmd { font-size: 11px; color: var(--text-dimmer); white-space: nowrap; }
+.section-cmd .dollar { color: var(--green-dim); }
+.section-cmd .cmd { color: var(--text-dim); }
+.section-line { flex: 1; height: 1px; background: var(--border); }
+
+/* ── EXPERIENCE ── */
+.exp-list { display: flex; flex-direction: column; }
+.exp-item {
+  display: grid; grid-template-columns: 180px 1fr;
+  gap: 48px; padding: 36px 0; border-bottom: 1px solid var(--border);
+}
+.exp-item:last-child { border-bottom: none; padding-bottom: 0; }
+.exp-co    { font-size: 12px; color: var(--green-dim); font-weight: 700; letter-spacing: 1px; }
+.exp-dates { font-size: 10px; color: var(--text-dimmer); margin-top: 4px; }
+.exp-role  { font-family: var(--sans); font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 4px; letter-spacing: -0.2px; }
+.exp-kpi   { font-size: 10px; color: var(--green); letter-spacing: 1px; margin-bottom: 12px; }
+.exp-bullets { list-style: none; }
+.exp-bullets li {
+  font-size: 12px; color: var(--text-dim); line-height: 1.9;
+  padding-left: 16px; position: relative;
+}
+.exp-bullets li::before { content: '>'; position: absolute; left: 0; color: var(--text-dimmer); }
+.exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.exp-tag       { font-size: 10px; border: 1px solid var(--border2); color: var(--text-dimmer); padding: 3px 10px; letter-spacing: 0.5px; }
+.exp-tag.ai    { border-color: var(--green-dark); color: var(--green-dim); }
+.exp-tag.blue-t{ border-color: rgba(59,130,246,0.2); color: rgba(96,165,250,0.65); }
+
+/* ── WHAT I COULD DO BOX ── */
+.roles-box {
+  border: 1px solid var(--border2); padding: 28px 32px;
+  background: var(--bg2); margin-top: 40px; position: relative;
+}
+.roles-box::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green-dim), transparent);
+}
+.roles-box-label { font-size: 10px; color: var(--green-dim); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+.roles-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.role-pill {
+  padding: 7px 18px; border: 1px solid var(--border2);
+  font-family: var(--sans); font-size: 13px; font-weight: 700;
+  color: var(--text-dim); background: var(--bg); transition: all 0.2s; cursor: default;
+}
+.role-pill:hover { border-color: var(--green-dim); color: var(--green); }
+
+/* ── AI GRID ── */
+.ai-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1px; background: var(--border);
+}
+.ai-card {
+  background: var(--bg); padding: 28px; cursor: pointer;
+  transition: background 0.2s; position: relative; overflow: hidden;
+  border-bottom: 2px solid transparent;
+}
+.ai-card:hover { background: var(--bg2); border-bottom-color: var(--green); }
+.ai-card-glow {
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green-dim), transparent);
+  opacity: 0; transition: opacity 0.3s;
+}
+.ai-card:hover .ai-card-glow { opacity: 1; }
+.ai-card-num   { font-size: 10px; color: var(--text-dimmer); letter-spacing: 2px; margin-bottom: 12px; }
+.ai-card-title { font-family: var(--sans); font-size: 14px; font-weight: 800; color: var(--text); margin-bottom: 4px; letter-spacing: -0.2px; }
+.ai-card-org   { font-size: 9px; color: var(--text-dimmer); letter-spacing: 1px; margin-bottom: 10px; text-transform: uppercase; }
+.ai-card-desc  { font-size: 11px; color: var(--text-dim); line-height: 1.85; margin-bottom: 14px; }
+.ai-card-tags  { display: flex; flex-wrap: wrap; gap: 4px; }
+.ai-card-tag   { font-size: 9px; color: var(--green-dim); letter-spacing: 1px; text-transform: uppercase; }
+.ai-card-tag::after { content: ' ·'; color: var(--text-dimmer); }
+.ai-card-tag:last-child::after { display: none; }
+.ai-card-link  { font-size: 10px; color: var(--green-dim); margin-top: 12px; display: block; letter-spacing: 1px; }
+
+/* ── SKILLS ── */
+.skills-two { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.skill-col-head {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid;
+}
+.skill-col-head.s { color: var(--blue-soft); border-color: rgba(59,130,246,0.18); }
+.skill-col-head.a { color: var(--green);     border-color: var(--green-dark); }
+.skill-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 9px 0; border-bottom: 1px solid var(--border);
+}
+.skill-row:last-child { border-bottom: none; }
+.skill-name { font-size: 11px; color: var(--text-dim); }
+.skill-bar  { width: 110px; height: 1px; background: var(--border2); position: relative; }
+.skill-fill { position: absolute; top: 0; left: 0; height: 100%; width: 0; background: var(--blue-soft); transition: width 1.2s ease; }
+.skill-fill.ai { background: var(--green); }
+
+/* ── HOBBIES ── */
+.hobbies-grid {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 1px; background: var(--border);
+}
+.hobby-card {
+  background: var(--bg); padding: 32px 24px;
+  cursor: default; transition: background 0.2s; text-align: center;
+}
+.hobby-card:hover { background: var(--bg2); }
+.hobby-icon  { font-size: 32px; margin-bottom: 14px; display: block; }
+.hobby-name  { font-family: var(--sans); font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.hobby-desc  { font-size: 11px; color: var(--text-dim); line-height: 1.8; }
+
+/* ── CONTACT ── */
+.contact-block {
+  border: 1px solid var(--border2); padding: 64px 48px;
+  text-align: center; background: var(--bg); position: relative; overflow: hidden;
+}
+.contact-block::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green-dim), transparent);
+}
+.contact-prompt { font-size: 11px; color: var(--text-dimmer); margin-bottom: 20px; }
+.contact-h {
+  font-family: var(--sans); font-size: 48px; font-weight: 900;
+  color: var(--green); letter-spacing: -2px; margin-bottom: 12px; line-height: 1;
+}
+.contact-sub {
+  font-size: 12px; color: var(--text-dim); margin-bottom: 12px; line-height: 1.9;
+}
+.contact-roles {
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 36px; margin-top: 16px;
+}
+.contact-role {
+  font-family: var(--sans); font-size: 12px; font-weight: 700;
+  color: var(--green-dim); border: 1px solid var(--green-dark);
+  padding: 5px 14px; letter-spacing: 0.5px; transition: all 0.2s;
+}
+.contact-role:hover { color: var(--green); border-color: var(--green-dim); }
+.contact-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+.contact-meta { font-size: 10px; color: var(--text-dimmer); letter-spacing: 0.5px; }
+.contact-meta a { color: var(--green-dim); text-decoration: none; }
+.contact-meta a:hover { color: var(--green); }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  background: var(--bg3); border: 1px solid var(--green-dim);
+  color: var(--green); padding: 10px 22px; border-radius: 4px;
+  font-size: 11px; opacity: 0; transition: opacity 0.25s;
+  pointer-events: none; z-index: 99999; white-space: nowrap; letter-spacing: 1px;
+}
+.toast.show { opacity: 1; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav { padding: 14px 24px; }
+  .hero { padding: 48px 24px 32px; }
+  .hero-name { font-size: clamp(42px, 12vw, 72px); letter-spacing: -2px; }
+  .powers-row { grid-template-columns: 1fr; }
+  .powers-label { padding: 0 24px 14px; }
+  .power-half { padding: 28px 24px; }
+  .hero-bio { padding: 24px 24px 32px; }
+  .stats-strip { grid-template-columns: repeat(3,1fr); }
+  .f500-bar { padding: 16px 24px; }
+  .section { padding: 40px 24px; }
+  .exp-item { grid-template-columns: 1fr; gap: 8px; }
+  .ai-grid { grid-template-columns: 1fr 1fr; }
+  .skills-two { grid-template-columns: 1fr; gap: 40px; }
+  .hobbies-grid { grid-template-columns: 1fr 1fr; }
+  .contact-block { padding: 48px 24px; }
+  .contact-h { font-size: 36px; }
+}
+@media (max-width: 480px) {
+  .ai-grid { grid-template-columns: 1fr; }
+  .hobbies-grid { grid-template-columns: 1fr; }
+  .stats-strip { grid-template-columns: repeat(2,1fr); }
+  .hero-name { font-size: 44px; }
+}
+</style>
+</head>
+<body>
+
+<div class="toast" id="toast"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">glopane<span>.sh</span></div>
+  <div class="nav-links">
+    <a onclick="go('powers')">superpowers</a>
+    <a onclick="go('experience')">experience</a>
+    <a onclick="go('ai-work')">ai work</a>
+    <a onclick="go('hobbies')">hobbies</a>
+  </div>
+  <button class="nav-cta" onclick="showToast('📅 glopane@gmail.com')">$ ./contact</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-prompt">
+    <span class="p-path">~/glopane</span>&nbsp;$ cat README.md
+  </div>
+  <div class="hero-name" id="typed-name"><span class="cursor"></span></div>
+</section>
+
+<!-- DUAL SUPERPOWER BANNER -->
+<div class="powers-wrap" id="powers">
+  <div class="powers-label">// TWO_SUPERPOWERS_DETECTED</div>
+  <div class="powers-row">
+
+    <div class="power-half sales">
+      <div class="power-tag">⚡ Superpower #1</div>
+      <div class="power-headline">I close deals.<br>I build revenue engines.</div>
+      <div class="power-desc">10+ years driving enterprise revenue across SaaS, iGaming, Web3, and fintech. $40M+ P&L. 60-person teams built from zero. Platforms raised and sold. I know what it takes to scale a commercial operation from first logo to exit.</div>
+      <div class="power-stats">
+        <div>
+          <div class="power-stat-n">$40M+</div>
+          <div class="power-stat-l">P&L Managed</div>
+        </div>
+        <div>
+          <div class="power-stat-n">60+</div>
+          <div class="power-stat-l">Team Led</div>
+        </div>
+        <div>
+          <div class="power-stat-n">3</div>
+          <div class="power-stat-l">Regions Opened</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="power-half ai">
+      <div class="power-tag">🤖 Superpower #2</div>
+      <div class="power-headline">I build AI systems<br>that replace entire teams.</div>
+      <div class="power-desc">12 autonomous agents in production. Three AI platforms built solo. RAG systems, multi-agent orchestration, semantic search, LLM automation. I don't just use AI tools — I architect systems that run without human supervision.</div>
+      <div class="power-stats">
+        <div>
+          <div class="power-stat-n">12</div>
+          <div class="power-stat-l">Agents Live</div>
+        </div>
+        <div>
+          <div class="power-stat-n">3</div>
+          <div class="power-stat-l">Platforms Built</div>
+        </div>
+        <div>
+          <div class="power-stat-n">∞</div>
+          <div class="power-stat-l">Still Building</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BIO -->
+<div class="hero-bio">
+  <div class="hero-bio-text">
+    Based between <span class="hl">Miami, FL</span> and <span class="hl">Málaga, Spain</span>. Operating globally.<br>
+    Sitting at the intersection of commercial execution and technical depth.<br>
+    <span class="hl">Princeton University</span> · ETHDenver 2025 Mentor · Boardy Ventures Deal Partner
+  </div>
+  <div class="hero-btns">
+    <button class="btn-primary" onclick="showToast('📅 glopane@gmail.com — let\'s talk')">$ ./schedule-call</button>
+    <button class="btn-ghost" onclick="window.open('https://linkedin.com/in/glopane','_blank')">$ open linkedin</button>
+    <button class="btn-ghost" onclick="window.open('https://github.com','_blank')">$ open github</button>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-cell"><div class="stat-n">$40M+</div><div class="stat-l">P&L Managed</div></div>
+  <div class="stat-cell"><div class="stat-n">60+</div><div class="stat-l">Team Led</div></div>
+  <div class="stat-cell"><div class="stat-n">12</div><div class="stat-l">AI Agents Live</div></div>
+  <div class="stat-cell"><div class="stat-n">3</div><div class="stat-l">AI Platforms Solo</div></div>
+  <div class="stat-cell"><div class="stat-n blue">10+</div><div class="stat-l">Years in Sales</div></div>
+</div>
+
+<!-- F500 BAR -->
+<div class="f500-bar">
+  <span class="f500-label">worked with</span>
+  <div class="f500-sep"></div>
+  <span class="f500-item">Fortune 500 Fintech</span>
+  <span class="f500-item">iGaming Tier-1 Operators</span>
+  <span class="f500-item">Global Web3 Enterprises</span>
+  <span class="f500-item">Retail SaaS Leaders</span>
+  <span class="f500-item">EMEA · LATAM · North America</span>
+</div>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="section-head">
+    <span class="section-cmd"><span class="dollar">$</span> <span class="cmd">cat experience.json | jq '.[]'</span></span>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-co">DGE Golf</div>
+        <div class="exp-dates">2024 – Present</div>
+      </div>
+      <div>
+        <div class="exp-role">Managing Director · AI Platform Builder</div>
+        <div class="exp-kpi">// BUILT_ENTIRE_STACK_SOLO · 12_AGENTS_DEPLOYED · AI_PIPELINE_LIVE</div>
+        <ul class="exp-bullets">
+          <li>Solo-architected full e-commerce + CRM platform (Next.js 15 · Payload CMS · MongoDB)</li>
+          <li>Deployed 12 autonomous Claude Code agents: content, outreach, enrichment, competitor intel</li>
+          <li>AI-powered semantic golf package matching — personalized recommendations at scale</li>
+          <li>Automated lead → CRM → deal → follow-up pipeline with zero human intervention</li>
+          <li>AI blog content generation, social media automation, and SEO intelligence systems</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag ai">Claude Code</span>
+          <span class="exp-tag ai">Multi-agent</span>
+          <span class="exp-tag ai">RAG</span>
+          <span class="exp-tag ai">Next.js 15</span>
+          <span class="exp-tag">CRM Automation</span>
+          <span class="exp-tag">Solo Build</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-co">ShopMaven AI</div>
+        <div class="exp-dates">2023 – 2024</div>
+      </div>
+      <div>
+        <div class="exp-role">AI Commercial Lead · RAG Architect</div>
+        <div class="exp-kpi">// GTM_DESIGN + RAG_SYSTEM_BUILT · SOLD_WHAT_I_BUILT</div>
+        <ul class="exp-bullets">
+          <li>Designed and executed GTM for AI-native retail SaaS across EMEA enterprise segment</li>
+          <li>Built production RAG system: vector search over 100k+ SKUs, LLM-synthesized recommendations</li>
+          <li>Architected embedding pipeline, semantic retrieval layer, and answer synthesis with Claude</li>
+          <li>Closed enterprise accounts while simultaneously building the core AI powering the product</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag ai">RAG Architecture</span>
+          <span class="exp-tag ai">Vector DB</span>
+          <span class="exp-tag ai">LLM Integration</span>
+          <span class="exp-tag">EMEA GTM</span>
+          <span class="exp-tag">Enterprise Sales</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-co">Smarterverse</div>
+        <div class="exp-dates">2021 – 2023</div>
+      </div>
+      <div>
+        <div class="exp-role">Head of Commercial · VP Sales</div>
+        <div class="exp-kpi">// $40M_RAISED · 60_TEAM · ACQUISITION_COMPLETED</div>
+        <ul class="exp-bullets">
+          <li>Led full commercial function from early traction to multi-region scale</li>
+          <li>Built and managed 60-person cross-functional team (AEs · BDRs · CSMs · Account Managers)</li>
+          <li>GTM execution across EMEA, LATAM, North America — new markets, net-new enterprise logos</li>
+          <li>Led commercial side of $40M+ raise and acquisition by tier-1 betting operator</li>
+          <li>Designed post-sale retention and upsell motions sustaining growth through the exit</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag blue-t">$40M+ Raised</span>
+          <span class="exp-tag blue-t">M&A Exit</span>
+          <span class="exp-tag">60-person Team</span>
+          <span class="exp-tag">EMEA / LATAM / NA</span>
+          <span class="exp-tag">Full P&L</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-co">Generiqo</div>
+        <div class="exp-dates">2018 – 2021</div>
+      </div>
+      <div>
+        <div class="exp-role">Commercial Director · Business Development</div>
+        <div class="exp-kpi">// FORTUNE_500_ACCOUNTS · MULTI_REGION · FULL_P&L</div>
+        <ul class="exp-bullets">
+          <li>Expanded revenue operations across EMEA, LATAM, and North America</li>
+          <li>Landed Fortune 500 accounts in fintech and iGaming verticals</li>
+          <li>Built partner ecosystems and channel programs that scaled sustainably</li>
+          <li>Full P&L ownership — from pipeline to post-sale retention</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag blue-t">Fortune 500</span>
+          <span class="exp-tag">Multi-region BD</span>
+          <span class="exp-tag">Channel Programs</span>
+          <span class="exp-tag">Fintech · iGaming</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-co">2008 – 2018</div>
+        <div class="exp-dates">10 years</div>
+      </div>
+      <div>
+        <div class="exp-role" style="font-size:15px;">Enterprise Sales · Global Commercial Roles</div>
+        <div class="exp-kpi">// B2B_SAAS · FINTECH · IGAMING · WEB3 · PRINCETON</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <span class="f500-item">Multinational SaaS</span>
+          <span class="f500-item">Global Fintech</span>
+          <span class="f500-item">iGaming Leaders</span>
+          <span class="f500-item">Web3 / Blockchain</span>
+          <span class="f500-item">Princeton University</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ROLE SUGGESTIONS BOX -->
+  <div class="roles-box">
+    <div class="roles-box-label">// WHERE_THIS_PROFILE_FITS</div>
+    <div class="roles-list">
+      <span class="role-pill">VP Sales</span>
+      <span class="role-pill">Chief Revenue Officer</span>
+      <span class="role-pill">Head of Commercial</span>
+      <span class="role-pill">GTM Lead</span>
+      <span class="role-pill">Head of Business Development</span>
+      <span class="role-pill">VP Revenue</span>
+      <span class="role-pill">Commercial Director</span>
+      <span class="role-pill">AI Sales Consultant</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- AI WORK -->
+<section class="section" id="ai-work">
+  <div class="section-head">
+    <span class="section-cmd"><span class="dollar">$</span> <span class="cmd">ls ~/ai-projects/ --sort=impact --all</span></span>
+    <div class="section-line"></div>
+  </div>
+  <div style="font-size:10px;color:var(--text-dimmer);margin-bottom:24px;letter-spacing:1px;">// 9 AI systems — not prototypes, not demos — production</div>
+
+  <div class="ai-grid">
+
+    <div class="ai-card" onclick="window.open('https://github.com','_blank')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-card-num">01 · SOLO_BUILD</div>
+      <div class="ai-card-title">DGE Golf Platform</div>
+      <div class="ai-card-org">DGE Golf · 2024</div>
+      <div class="ai-card-desc">Full e-commerce + CRM + AI matching engine. Next.js 15, Payload CMS, MongoDB. AI-powered semantic golf package discovery and automated sales pipeline. Built alone.</div>
+      <div class="ai-card-tags">
+        <span class="ai-card-tag">Next.js</span>
+        <span class="ai-card-tag">Payload CMS</span>
+        <span class="ai-card-tag">Semantic AI</span>
+      </div>
+      <a class="ai-card-link">↗ view on github</a>
+    </div>
+
+    <div class="ai-card" onclick="showToast('12 agents · zero downtime · fully autonomous')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-card-num">02 · ENTERPRISE_PRODUCTION</div>
+      <div class="ai-card-title">12 Autonomous Claude Agents</div>
+      <div class="ai-card-org">Enterprise Deployment · 2024</div>
+      <div class="ai-card-desc">Designed and deployed 12 specialized Claude Code agents across a company's operations. Content, enrichment, pipeline automation, intelligent routing. Zero human oversight daily.</div>
+      <div class="ai-card-tags">
+        <span class="ai-card-tag">Claude Code</span>
+        <span class="ai-card-tag">Multi-agent</span>
+        <span class="ai-card-tag">Orchestration</span>
+      </div>
+    </div>
+
+    <div class="ai-card" onclick="showToast('100k+ SKU semantic search · LLM synthesis')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-card-num">03 · RAG_SYSTEM</div>
+      <div class="ai-card-title">ShopMaven RAG Intelligence</div>
+      <div class="ai-card-org">ShopMaven AI · 2023</div>
+      <div class="ai-card-desc">Vector search over 100k+ product catalog. Embedding pipeline, semantic retrieval, LLM-synthesized answers. Built as core product — not a prototype.</div>
+      <div class="ai-card-tags">
+        <span class="ai-card-tag">RAG</span>
+        <span class="ai-card-tag">Vector DB</span>
+        <span class="ai-card-tag">Embeddings</span>
+        <span class="ai-card-tag">Claude</span>
+      </div>
+    </div>
+
+    <div class="ai-card" onclick="showToast('AI personalization · hundreds of emails/day')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-card-num">04 · SALES_AUTOMATION</div>
+      <div class="ai-card-title">AI Sales Outreach Engine</div>
+      <div class="ai-card-org">DGE Golf · Self-built</div>
+      <div class="ai-card-desc">Claude-generated personalized email campaigns at scale. IMAP/SMTP automation, smart follow-up sequencing, bounce handling, AI-powered reply routing.</div>
+      <div class="ai-card-tags">
+        <span class="ai-card-tag">Claude</span>
+        <span class="ai-card-tag">Email Automation</span>
+        <span class="ai-card-tag">Node.js</span>
+      </div>
+    </div>
+
+    <div class="ai-card" onclick="showToast('AI competitor intel · market monitoring')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-card-num">05 · INTELLIGENCE</div>
+      <div class="ai-card-title">AI Competitor Intelligence</div>
+      <div class="ai-card-org">DGE Golf · Self-built</div>
+      <div class="ai-card-desc">Playwright scraper + Claude Haiku for AI-assisted competitor analysis. Automated market monitoring, pricing intelligence, strategic insights — runs on schedule.</div>
+      <div class="ai-card-tags">
+        <span class="ai-card-tag">Playwright</span>
+        <span class="ai-card-tag">Claude Haiku</span>
+        <span class="ai-card-tag">Market Intel</span>
+      </div>
+    </div>
+
+    <div class="ai-card" onclick="showToast('Auto deal titles · contact stats · smart routing')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-card-num">06 · CRM_AI</div>
+      <div class="ai-card-title">CRM Intelligence Layer</div>
+      <div class="ai-card-org">DGE Golf · Self-built</div>
+      <div class="ai-card-desc">AI-powered CRM hooks: automatic deal title generation, smart contact–deal linking, duplicate detection, contact statistics computation, AI-assisted pipeline routing.</div>
+      <div class="ai-card-tags">
+        <span class="ai-card-tag">CRM Hooks</span>
+        <span class="ai-card-tag">LLM Logic</span>
+        <span class="ai-card-tag">Pipeline AI</span>
+      </div>
+    </div>
+
+    <div class="ai-card" onclick="showToast('AI blog posts · SEO content at scale')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-card-num">07 · CONTENT_AI</div>
+      <div class="ai-card-title">AI Content Generation Pipeline</div>
+      <div class="ai-card-org">DGE Golf · Self-built</div>
+      <div class="ai-card-desc">Automated blog post generation, social media content, and SEO-optimized copy — powered by Claude agents. Content production on autopilot with zero manual writing.</div>
+      <div class="ai-card-tags">
+        <span class="ai-card-tag">Content Agents</span>
+        <span class="ai-card-tag">SEO AI</span>
+        <span class="ai-card-tag">Claude</span>
+      </div>
+    </div>
+
+    <div class="ai-card" onclick="showToast('ETHDenver 2025 · AI & Blockchain mentoring')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-card-num">08 · VC_ADVISOR</div>
+      <div class="ai-card-title">Boardy Ventures · Deal Partner</div>
+      <div class="ai-card-org">AI-Led VC Fund · AngelList · 2025</div>
+      <div class="ai-card-desc">Deal Partner at the world's first AI-led venture fund. 8,000+ founders, $20B+ collective raise, 1,000+ investors. ETHDenver 2025 mentor for AI agents and blockchain teams.</div>
+      <div class="ai-card-tags">
+        <span class="ai-card-tag">AI VC</span>
+        <span class="ai-card-tag">ETHDenver Mentor</span>
+        <span class="ai-card-tag">Blockchain + AI</span>
+      </div>
+    </div>
+
+    <div class="ai-card" onclick="showToast('IAGTO scraping · Excel export · Playwright')">
+      <div class="ai-card-glow"></div>
+      <div class="ai-card-num">09 · DATA_AUTOMATION</div>
+      <div class="ai-card-title">IAGTO Contact Intelligence</div>
+      <div class="ai-card-org">DGE Golf · Self-built</div>
+      <div class="ai-card-desc">Playwright scraping of IAGTO's global golf member directory. AI-assisted contact enrichment, deduplication, exclusion management, and export for campaign targeting.</div>
+      <div class="ai-card-tags">
+        <span class="ai-card-tag">Playwright</span>
+        <span class="ai-card-tag">Data Enrichment</span>
+        <span class="ai-card-tag">Web Scraping</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section">
+  <div class="section-head">
+    <span class="section-cmd"><span class="dollar">$</span> <span class="cmd">cat skills.json --both</span></span>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-two">
+    <div>
+      <div class="skill-col-head s">// sales &amp; gtm</div>
+      <div class="skill-row"><span class="skill-name">Enterprise Pipeline Management</span><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
+      <div class="skill-row"><span class="skill-name">GTM Strategy &amp; Execution</span><div class="skill-bar"><div class="skill-fill" data-w="93"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Team Building (AEs/BDRs/CSMs)</span><div class="skill-bar"><div class="skill-fill" data-w="92"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Account Management &amp; Upsell</span><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Multi-region Expansion</span><div class="skill-bar"><div class="skill-fill" data-w="92"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Negotiation &amp; Enterprise Closing</span><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+      <div class="skill-row"><span class="skill-name">P&amp;L / Revenue Ownership</span><div class="skill-bar"><div class="skill-fill" data-w="88"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Partner Ecosystems &amp; Channels</span><div class="skill-bar"><div class="skill-fill" data-w="87"></div></div></div>
+      <div class="skill-row"><span class="skill-name">M&amp;A / Fundraising Support</span><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+      <div class="skill-row"><span class="skill-name">SaaS · iGaming · Web3 · Fintech</span><div class="skill-bar"><div class="skill-fill" data-w="95"></div></div></div>
+    </div>
+    <div>
+      <div class="skill-col-head a">// ai &amp; automation</div>
+      <div class="skill-row"><span class="skill-name">Claude Code Agent Architecture</span><div class="skill-bar"><div class="skill-fill ai" data-w="96"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Multi-agent Orchestration</span><div class="skill-bar"><div class="skill-fill ai" data-w="94"></div></div></div>
+      <div class="skill-row"><span class="skill-name">RAG System Design</span><div class="skill-bar"><div class="skill-fill ai" data-w="90"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Prompt Engineering</span><div class="skill-bar"><div class="skill-fill ai" data-w="95"></div></div></div>
+      <div class="skill-row"><span class="skill-name">LLM Integration (Claude / GPT)</span><div class="skill-bar"><div class="skill-fill ai" data-w="92"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Vector Search &amp; Embeddings</span><div class="skill-bar"><div class="skill-fill ai" data-w="88"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Workflow Automation (Node.js)</span><div class="skill-bar"><div class="skill-fill ai" data-w="90"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Next.js 15 / Full Stack</span><div class="skill-bar"><div class="skill-fill ai" data-w="84"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Web Scraping (Playwright)</span><div class="skill-bar"><div class="skill-fill ai" data-w="85"></div></div></div>
+      <div class="skill-row"><span class="skill-name">Blockchain / DLT / Web3</span><div class="skill-bar"><div class="skill-fill ai" data-w="82"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOBBIES -->
+<section class="section" id="hobbies">
+  <div class="section-head">
+    <span class="section-cmd"><span class="dollar">$</span> <span class="cmd">cat hobbies.json</span></span>
+    <div class="section-line"></div>
+  </div>
+  <div class="hobbies-grid">
+    <div class="hobby-card">
+      <span class="hobby-icon">🤖</span>
+      <div class="hobby-name">Building AI Things</div>
+      <div class="hobby-desc">If there's a new model, API, or agent framework out there, I'm already hacking something with it. Building AI systems isn't work — it's my favorite way to spend a Sunday.</div>
+    </div>
+    <div class="hobby-card">
+      <span class="hobby-icon">🧪</span>
+      <div class="hobby-name">Testing &amp; Experimenting</div>
+      <div class="hobby-desc">I test everything obsessively — models, prompts, workflows, automations. I need to break a tool before I trust it. Browser currently has 47 AI tabs open.</div>
+    </div>
+    <div class="hobby-card">
+      <span class="hobby-icon">📚</span>
+      <div class="hobby-name">Constant Learning</div>
+      <div class="hobby-desc">AI moves faster than any industry I've worked in. I keep up by reading, building, and talking to people smarter than me. Currently: agent memory, MCP servers, eval frameworks.</div>
+    </div>
+    <div class="hobby-card">
+      <span class="hobby-icon">⛳</span>
+      <div class="hobby-name">Golf</div>
+      <div class="hobby-desc">20+ years playing and running elite golf tours worldwide. Networked with CEOs, celebrities, and ex-Presidents on the fairway. Where I clear my head between agent deployments.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <div class="contact-block">
+    <div class="contact-prompt">$ ./reach-out.sh --gianfranco-lopane</div>
+    <div class="contact-h">Let's talk.</div>
+    <div class="contact-sub">
+      Senior Sales &amp; GTM leader who also builds the AI.<br>
+      Miami, FL · Málaga, Spain · Global.
+    </div>
+    <div class="contact-roles">
+      <span class="contact-role">VP Sales</span>
+      <span class="contact-role">Chief Revenue Officer</span>
+      <span class="contact-role">Head of Commercial</span>
+      <span class="contact-role">GTM Lead</span>
+      <span class="contact-role">VP Revenue</span>
+      <span class="contact-role">AI Sales Consultant</span>
+    </div>
+    <div class="contact-btns">
+      <button class="btn-primary" onclick="showToast('✓ glopane@gmail.com')">$ ./send-email</button>
+      <button class="btn-ghost" onclick="window.open('https://linkedin.com/in/glopane','_blank')">$ open linkedin</button>
+    </div>
+    <div class="contact-meta">
+      Miami, FL · Málaga, Spain ·
+      <a href="https://linkedin.com/in/glopane" target="_blank">linkedin.com/in/glopane</a> ·
+      <a href="https://lopane.net">lopane.net</a>
+    </div>
+  </div>
+</section>
+
+<script>
+// Toast
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+// Smooth scroll
+function go(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Typing hero name
+(function typeHero() {
+  const el = document.getElementById('typed-name');
+  if (!el) return;
+  const text = 'Gianfranco\nLopane';
+  let i = 0;
+  let html = '';
+  const iv = setInterval(() => {
+    if (i >= text.length) { clearInterval(iv); return; }
+    const ch = text[i];
+    if (ch === '\n') { html += '<br>'; }
+    else { html += ch; }
+    i++;
+    el.innerHTML = html + '<span class="cursor"></span>';
+  }, 60);
+})();
+
+// Skill bars on scroll
+const skillObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.skill-fill[data-w]').forEach(b => {
+        b.style.width = b.dataset.w + '%';
+      });
+      skillObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.skills-two').forEach(el => skillObs.observe(el));
+
+// Scroll reveal
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.05 });
+
+const delay_els = [
+  ...document.querySelectorAll('.ai-card'),
+  ...document.querySelectorAll('.exp-item'),
+  ...document.querySelectorAll('.hobby-card'),
+  ...document.querySelectorAll('.power-half'),
+  ...document.querySelectorAll('.role-pill'),
+];
+delay_els.forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(14px)';
+  el.style.transition = `opacity 0.45s ease ${Math.min(i * 0.04, 0.4)}s, transform 0.45s ease ${Math.min(i * 0.04, 0.4)}s`;
+  revealObs.observe(el);
+});
+</script>
+</body>
+</html>
