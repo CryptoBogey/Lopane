@@ -166,7 +166,7 @@ body::before {
 
 /* STATS STRIP */
 .stats-strip {
-  display: grid; grid-template-columns: repeat(5,1fr);
+  display: grid; grid-template-columns: repeat(6,1fr);
   gap: 0; background: var(--border);
   border-top: 1px solid var(--border);
   position: relative; z-index: 1;
@@ -358,7 +358,7 @@ body::before {
   .powers-label { padding: 0 24px 14px; }
   .power-half { padding: 28px 24px; }
   .hero-bio { padding: 24px 24px 32px; }
-  .stats-strip { grid-template-columns: repeat(3,1fr); }
+  .stats-strip { grid-template-columns: repeat(3,1fr); } /* 2 rows of 3 on mobile */
   .f500-bar { padding: 16px 24px; }
   .section { padding: 40px 24px; }
   .exp-item { grid-template-columns: 1fr; gap: 8px; }
@@ -407,8 +407,8 @@ body::before {
 
     <div class="power-half sales">
       <div class="power-tag">⚡ Superpower #1</div>
-      <div class="power-headline">I sell AI.<br>I build the revenue engine around it.</div>
-      <div class="power-desc">10+ years closing enterprise deals across AI/SaaS, blockchain, fintech, and Web3. I have been on both sides of the table: the rep who closes the logo, and the executive who builds the team, the process, and the playbook from zero. I have sold AI products to Fortune 500 accounts, opened three international regions cold, and carried full P&amp;L through raises, acquisitions, and exits. When a company needs someone who can walk into a boardroom, articulate the ROI of an AI product with technical precision, and walk out with a signed contract — that is where I live.</div>
+      <div class="power-headline">I close deals.<br>I build revenue engines.</div>
+      <div class="power-desc">10+ years of enterprise commercial leadership across SaaS, AI, blockchain, fintech, and Web3. P&amp;L ownership. Team building from zero. Market entry. I have opened three international regions cold, built 60-person commercial organizations, and closed the enterprise accounts that move the needle. I sell complex, technical products to C-level buyers and I know how to translate technology into revenue. The AI layer is real and it makes me sharper: I understand what I am selling at a technical level that most sales leaders do not. But the core of this profile is commercial execution. I find revenue, create it, and scale it.</div>
       <div class="power-stats">
         <div>
           <div class="power-stat-n">$40M+</div>
@@ -456,7 +456,7 @@ body::before {
     <span class="hl">Princeton University</span> · ETHDenver 2025 Mentor · Always 3 experiments running in parallel.
   </div>
   <div class="hero-btns">
-    <button class="btn-primary" onclick="showToast('📅 glopane@gmail.com — let\'s talk')">$ ./schedule-call</button>
+    <button class="btn-primary" onclick="showToast('📅 glopane@gmail.com let\'s talk')">$ ./schedule-call</button>
     <button class="btn-ghost" onclick="window.open('https://linkedin.com/in/glopane','_blank')">$ open linkedin</button>
   </div>
 </div>
@@ -465,9 +465,10 @@ body::before {
 <div class="stats-strip">
   <div class="stat-cell"><div class="stat-n">$40M+</div><div class="stat-l">P&amp;L Managed</div></div>
   <div class="stat-cell"><div class="stat-n">60+</div><div class="stat-l">Team Built</div></div>
-  <div class="stat-cell"><div class="stat-n">12</div><div class="stat-l">AI Agents Live</div></div>
-  <div class="stat-cell"><div class="stat-n">3</div><div class="stat-l">Platforms Solo</div></div>
   <div class="stat-cell"><div class="stat-n blue">10+</div><div class="stat-l">Years in Sales</div></div>
+  <div class="stat-cell"><div class="stat-n">12</div><div class="stat-l">AI Agents Live</div></div>
+  <div class="stat-cell"><div class="stat-n">3</div><div class="stat-l">AI Platforms Solo</div></div>
+  <div class="stat-cell"><div class="stat-n">800+</div><div class="stat-l">Golf Courses · IAGTO</div></div>
 </div>
 
 <!-- F500 BAR -->
@@ -498,14 +499,15 @@ body::before {
       </div>
       <div>
         <div class="exp-role">Managing Director · AI Platform Builder</div>
-        <div class="exp-kpi">// FULL_STACK_SOLO · 12_AGENTS_DEPLOYED · ZERO_ENGINEERING_TEAM</div>
+        <div class="exp-kpi">// FULL_STACK_SOLO · 12_AGENTS_DEPLOYED · 800_COURSES_CURATED · IAGTO_MEMBER</div>
         <ul class="exp-bullets">
+          <li>Active IAGTO member: 800+ premium golf courses contracted and curated one by one across global markets</li>
           <li>Solo-architected full e-commerce and CRM platform: Next.js 15, Payload CMS, MongoDB, TypeScript, Node.js ESM</li>
           <li>Designed and deployed 12 specialized Claude Code agents: content generation, outreach sequencing, contact enrichment, competitor intelligence, pipeline routing</li>
-          <li>Built AI-powered semantic golf package matching using vector embeddings and LLM synthesis — personalized recommendations at scale with no manual curation</li>
+          <li>Built AI-powered semantic golf package matching using vector embeddings and LLM synthesis: personalized recommendations at scale with no manual curation</li>
           <li>Engineered automated lead-to-CRM-to-deal-to-follow-up pipeline: zero human touchpoints from form fill to proposal delivery</li>
-          <li>Production AI content pipeline: blog generation, SEO optimization, social media automation — all running on schedule, unattended</li>
-          <li>Implemented MCP (Model Context Protocol) server integrations for agent-to-tool communication across the stack</li>
+          <li>Production AI content pipeline: blog generation, SEO optimization, social media automation, all running on schedule, unattended</li>
+          <li>Implemented MCP (Model Context Protocol) server integrations for agent-to-tool communication across the full stack</li>
         </ul>
         <div class="exp-tags">
           <span class="exp-tag ai">Claude Code</span>
@@ -514,8 +516,9 @@ body::before {
           <span class="exp-tag ai">RAG</span>
           <span class="exp-tag ai">Next.js 15</span>
           <span class="exp-tag ai">TypeScript</span>
+          <span class="exp-tag">IAGTO Member</span>
+          <span class="exp-tag">800+ Courses</span>
           <span class="exp-tag">Full Solo Build</span>
-          <span class="exp-tag">CRM Automation</span>
         </div>
       </div>
     </div>
@@ -557,7 +560,7 @@ body::before {
           <li>Led full commercial function from early traction to multi-region scale across EMEA, LATAM, and North America</li>
           <li>Built and managed 60-person cross-functional commercial team: AEs, BDRs, CSMs, and Account Managers hired and ramped from zero</li>
           <li>Drove net-new enterprise logos and new market entry across three international regions simultaneously</li>
-          <li>Led commercial side of $40M+ fundraise and subsequent acquisition by a tier-1 operator — full M&amp;A process involvement</li>
+          <li>Led commercial side of $40M+ fundraise and subsequent acquisition by a tier-1 operator full M&amp;A process involvement</li>
           <li>Designed post-sale retention and upsell playbooks that sustained revenue growth through the acquisition transition</li>
         </ul>
         <div class="exp-tags">
@@ -579,8 +582,8 @@ body::before {
         <div class="exp-role">Commercial Director · Business Development</div>
         <div class="exp-kpi">// FORTUNE_500_ACCOUNTS · MULTI_REGION · FULL_P&L</div>
         <ul class="exp-bullets">
-          <li>Expanded revenue operations across EMEA, LATAM, and North America — greenfield market entry with no playbook</li>
-          <li>Landed and grew Fortune 500 accounts in fintech and technology verticals — strategic enterprise relationships at C-suite level</li>
+          <li>Expanded revenue operations across EMEA, LATAM, and North America greenfield market entry with no playbook</li>
+          <li>Landed and grew Fortune 500 accounts in fintech and technology verticals strategic enterprise relationships at C-suite level</li>
           <li>Built partner ecosystems and channel programs from scratch that created durable, compounding revenue streams</li>
           <li>Full P&amp;L ownership: pipeline generation through post-sale retention and expansion</li>
         </ul>
@@ -599,16 +602,17 @@ body::before {
         <div class="exp-dates">10 years</div>
       </div>
       <div>
-        <div class="exp-role" style="font-size:15px;">Enterprise Sales · Global Commercial Roles</div>
-        <div class="exp-kpi">// B2B_SAAS · FINTECH · WEB3 · BLOCKCHAIN · FORTUNE_500 · PRINCETON</div>
+        <div class="exp-role" style="font-size:15px;">Enterprise Sales · Territory Growth · Digital Transformation</div>
+        <div class="exp-kpi">// FORTUNE_500 · ACTIVE_SALES · TERRITORY_EXPANSION · DIGITAL_TRANSFORMATION · PRINCETON</div>
         <div style="font-size:12px;color:var(--text-dim);line-height:1.9;margin-bottom:16px;max-width:580px;">
-          A decade of enterprise sales execution across B2B SaaS, fintech, blockchain, and global technology. Worked directly with Fortune 500 organizations including Hertz, Nestle, and XPO. Built commercial relationships, grew accounts, and developed the instinct for closing complex deals in competitive markets. Princeton University education underpins the analytical and communication frameworks used across every role since.
+          A decade of active enterprise sales: growing territories from scratch, prospecting and closing Fortune 500 accounts, and expanding commercial footprint across international markets. Worked directly with Hertz, Nestlé, and XPO among others. Alongside the sales execution, I was repeatedly pulled into digital transformation initiatives because of my technical depth: helping organizations adopt new platforms, restructure commercial systems, and integrate emerging technology into sales and operations. Princeton University education sharpened the analytical and communication instincts that underpin every deal closed since.
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
           <span class="f500-item">Hertz</span>
           <span class="f500-item">Nestlé</span>
           <span class="f500-item">XPO</span>
-          <span class="f500-item">Blockchain / Web3</span>
+          <span class="f500-item">Digital Transformation</span>
+          <span class="f500-item">Territory Sales</span>
           <span class="f500-item">B2B SaaS</span>
           <span class="f500-item">Princeton University</span>
         </div>
@@ -678,7 +682,7 @@ body::before {
       <div class="ai-card-num">03 · RAG_SYSTEM</div>
       <div class="ai-card-title">ShopMaven RAG Intelligence</div>
       <div class="ai-card-org">ShopMaven AI · 2023</div>
-      <div class="ai-card-desc">Production RAG system: 100k+ product catalog indexed with vector embeddings, semantic retrieval layer, and LLM-synthesized answer generation. Not a wrapper. A fully custom embedding pipeline, chunking strategy, retrieval logic, and synthesis prompt chain — built as the core product.</div>
+      <div class="ai-card-desc">Production RAG system: 100k+ product catalog indexed with vector embeddings, semantic retrieval layer, and LLM-synthesized answer generation. Not a wrapper. A fully custom embedding pipeline, chunking strategy, retrieval logic, and synthesis prompt chain built as the core product.</div>
       <div class="ai-card-tags">
         <span class="ai-card-tag">RAG</span>
         <span class="ai-card-tag">Vector DB</span>
@@ -734,7 +738,7 @@ body::before {
       <div class="ai-card-num">07 · CONTENT_AI</div>
       <div class="ai-card-title">AI Content Generation Pipeline</div>
       <div class="ai-card-org">DGE Golf · Self-built</div>
-      <div class="ai-card-desc">Automated blog post generation, SEO-optimized copy, and social media content at scale — all powered by Claude agent pipelines. Structured prompt chains, automatic formatting, CMS injection, and publishing. Content production on full autopilot with consistent brand voice and zero manual writing.</div>
+      <div class="ai-card-desc">Automated blog post generation, SEO-optimized copy, and social media content at scale all powered by Claude agent pipelines. Structured prompt chains, automatic formatting, CMS injection, and publishing. Content production on full autopilot with consistent brand voice and zero manual writing.</div>
       <div class="ai-card-tags">
         <span class="ai-card-tag">Content Agents</span>
         <span class="ai-card-tag">SEO Automation</span>
@@ -748,7 +752,7 @@ body::before {
       <div class="ai-card-num">08 · BLOCKCHAIN_AI</div>
       <div class="ai-card-title">AI on Blockchain: ETHDenver 2025</div>
       <div class="ai-card-org">ETHDenver · AngelList Ecosystem · 2025</div>
-      <div class="ai-card-desc">Mentor at ETHDenver 2025 for AI agent and blockchain teams. Deep background across DeFi, smart contracts, tokenomics, Web3 GTM, and the emerging intersection of autonomous AI agents with on-chain infrastructure. Blockchain is not a past chapter — it is a live vertical.</div>
+      <div class="ai-card-desc">Mentor at ETHDenver 2025 for AI agent and blockchain teams. Deep background across DeFi, smart contracts, tokenomics, Web3 GTM, and the emerging intersection of autonomous AI agents with on-chain infrastructure. Blockchain is not a past chapter it is a live vertical.</div>
       <div class="ai-card-tags">
         <span class="ai-card-tag">Blockchain</span>
         <span class="ai-card-tag">AI Agents on Chain</span>
@@ -820,7 +824,7 @@ body::before {
     <div class="hobby-card">
       <span class="hobby-icon">🤖</span>
       <div class="hobby-name">Building AI Things</div>
-      <div class="hobby-desc">New model drops on a Tuesday — I have something hacked together by Wednesday morning. Every new API, agent framework, or LLM capability gets tested in a real use case within days. Building AI systems is not work. It is the default state.</div>
+      <div class="hobby-desc">New model drops on a Tuesday I have something hacked together by Wednesday morning. Every new API, agent framework, or LLM capability gets tested in a real use case within days. Building AI systems is not work. It is the default state.</div>
     </div>
     <div class="hobby-card">
       <span class="hobby-icon">🧪</span>
@@ -830,7 +834,7 @@ body::before {
     <div class="hobby-card">
       <span class="hobby-icon">📡</span>
       <div class="hobby-name">Always at the Edge</div>
-      <div class="hobby-desc">I track the AI and blockchain frontier obsessively. Not for FOMO — because knowing what is coming one quarter ahead is a competitive advantage. I read research papers, test pre-release tools, and follow the people building the infrastructure everyone else will use in two years.</div>
+      <div class="hobby-desc">I track the AI and blockchain frontier obsessively. Not for FOMO because knowing what is coming one quarter ahead is a competitive advantage. I read research papers, test pre-release tools, and follow the people building the infrastructure everyone else will use in two years.</div>
     </div>
     <div class="hobby-card">
       <span class="hobby-icon">⛳</span>
