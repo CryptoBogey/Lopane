@@ -364,6 +364,7 @@ body::before {
   .exp-item { grid-template-columns: 1fr; gap: 8px; }
   .ai-grid { grid-template-columns: 1fr 1fr; }
   .skills-two { grid-template-columns: 1fr; gap: 40px; }
+  .edu-grid { grid-template-columns: 1fr !important; }
   .hobbies-grid { grid-template-columns: 1fr 1fr; }
   .contact-block { padding: 48px 24px; }
   .contact-h { font-size: 36px; }
@@ -387,6 +388,7 @@ body::before {
     <a onclick="go('powers')">superpowers</a>
     <a onclick="go('experience')">experience</a>
     <a onclick="go('ai-work')">ai work</a>
+    <a onclick="go('education')">education</a>
     <a onclick="go('hobbies')">hobbies</a>
   </div>
   <button class="nav-cta" onclick="showToast('📅 glopane@gmail.com')">$ ./contact</button>
@@ -603,7 +605,7 @@ body::before {
       </div>
       <div>
         <div class="exp-role" style="font-size:15px;">Enterprise Sales · Territory Growth · Digital Transformation</div>
-        <div class="exp-kpi">// HERTZ · NESTLE · XPO · TERRITORY_EXPANSION · DIGITAL_TRANSFORMATION</div>
+        <div class="exp-kpi">// HERTZ · NESTLE · XPO · TERRITORY_EXPANSION · DIGITAL_TRANSFORMATION · B2B_ENTERPRISE</div>
         <div style="font-size:12px;color:var(--text-dim);line-height:1.9;margin-bottom:16px;max-width:580px;">
           A decade working inside major global organizations including Hertz, Nestlé, and XPO. Active sales roles throughout: growing territories, opening new accounts, and expanding revenue in competitive markets. Alongside the commercial execution, I was consistently tapped for digital transformation work due to my technical aptitude — helping these organizations modernize platforms, restructure commercial operations, and integrate new technology into their sales and business processes.
         </div>
@@ -811,6 +813,92 @@ body::before {
       <div class="skill-row"><span class="skill-name">Blockchain / DeFi / Smart Contracts</span><div class="skill-bar"><div class="skill-fill ai" data-w="85"></div></div></div>
     </div>
   </div>
+</section>
+
+<!-- EDUCATION + CREDENTIALS -->
+<section class="section" id="education">
+  <div class="section-head">
+    <span class="section-cmd"><span class="dollar">$</span> <span class="cmd">cat credentials.json --full</span></span>
+    <div class="section-line"></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:1px;">
+
+    <!-- EDUCATION -->
+    <div style="background:var(--bg);padding:32px 36px;">
+      <div style="font-size:10px;color:var(--green-dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;">// formal education</div>
+
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="padding:20px 0;border-bottom:1px solid var(--border);">
+          <div style="font-size:9px;color:var(--text-dimmer);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;">2002 – 2006</div>
+          <div style="font-family:var(--sans);font-size:14px;font-weight:800;color:var(--text);margin-bottom:3px;">Bachelor in Business Management</div>
+          <div style="font-size:11px;color:var(--green-dim);">Pontificia Universidad Católica Madre y Maestra</div>
+        </div>
+        <div style="padding:20px 0;border-bottom:1px solid var(--border);">
+          <div style="font-size:9px;color:var(--text-dimmer);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;">2012 – 2014</div>
+          <div style="font-family:var(--sans);font-size:14px;font-weight:800;color:var(--text);margin-bottom:3px;">Master's in Commercial and Marketing Management</div>
+          <div style="font-size:11px;color:var(--green-dim);">EUDE Business School</div>
+        </div>
+        <div style="padding:20px 0;">
+          <div style="font-size:9px;color:var(--text-dimmer);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;">2016 – 2017</div>
+          <div style="font-family:var(--sans);font-size:14px;font-weight:800;color:var(--text);margin-bottom:3px;">Bitcoin and Cryptocurrency Technologies</div>
+          <div style="font-size:11px;color:var(--green-dim);">Princeton University</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div style="background:var(--bg);padding:32px 36px;">
+      <div style="font-size:10px;color:var(--green-dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;">// certifications</div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="padding:12px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;">
+          <span style="font-size:14px;">🤖</span>
+          <div>
+            <div style="font-size:11px;color:var(--text);font-weight:600;">Anthropic Developer Courses</div>
+            <div style="font-size:10px;color:var(--text-dimmer);margin-top:2px;">Claude API · Prompt Engineering · Agents · MCP</div>
+          </div>
+        </div>
+        <div style="padding:12px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;">
+          <span style="font-size:14px;">⛓️</span>
+          <div>
+            <div style="font-size:11px;color:var(--text);font-weight:600;">Blockchain and DeFi Certifications</div>
+            <div style="font-size:10px;color:var(--text-dimmer);margin-top:2px;">Smart Contracts · DeFi Protocols · Web3 Infrastructure</div>
+          </div>
+        </div>
+        <div style="padding:12px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;">
+          <span style="font-size:14px;">🏆</span>
+          <div>
+            <div style="font-size:11px;color:var(--text);font-weight:600;">Global Hackathons</div>
+            <div style="font-size:10px;color:var(--text-dimmer);margin-top:2px;">AI · Blockchain · Vibe Coding events worldwide</div>
+          </div>
+        </div>
+        <div style="padding:12px 0;display:flex;align-items:center;gap:12px;">
+          <span style="font-size:14px;">🎤</span>
+          <div>
+            <div style="font-size:11px;color:var(--text);font-weight:600;">International Speaker</div>
+            <div style="font-size:10px;color:var(--text-dimmer);margin-top:2px;">AI · Sales · Blockchain · Tech Innovation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SPEAKER STRIP -->
+  <div style="background:var(--bg2);border:1px solid var(--border);border-top:none;padding:16px 36px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+    <span style="font-size:9px;color:var(--text-dimmer);letter-spacing:2px;text-transform:uppercase;white-space:nowrap;">// spoken at</span>
+    <div style="width:1px;height:16px;background:var(--border2);"></div>
+    <span class="f500-item">New York</span>
+    <span class="f500-item">Los Angeles</span>
+    <span class="f500-item">San Francisco</span>
+    <span class="f500-item">London</span>
+    <span class="f500-item">Milan</span>
+    <span class="f500-item">Madrid</span>
+    <span class="f500-item">Miami</span>
+    <span class="f500-item">Malaga</span>
+    <span class="f500-item">+ More</span>
+  </div>
+
 </section>
 
 <!-- HOBBIES -->
